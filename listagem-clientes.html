@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mostra(conteudo){
+            document.write(conteudo);
+        }
+
+        function mostraH3(conteudo){
+            document.write("<h3>" + conteudo + "</h3>");
+        }
+
+        function traço(){
+            document.write("<hr>");
+        }
+
+        function PulaLinha(){
+            document.write("<br>");
+        }
+
+        function PulaLinha2(){
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function Cabecalho(){
+            mostra("<h1>>>COMEX<<</h1>");
+            mostra("<h2>:: Lista de Clientes</h2>");
+            traço();
+        }
+
+        anoFulano = 1980;
+        anoBeltrano = 1981;
+        anoSicrano = 1984;
+        anoAtual = 2023;
+        idadeFulano = anoAtual - anoFulano;
+        idadeBeltrano = anoAtual - anoBeltrano;
+        idadeSicrano = anoAtual - anoSicrano;
+        somaIdades = idadeFulano + idadeBeltrano + idadeSicrano;
+        mediaIdades = somaIdades/3;
+
+        function Conteudo(){
+            mostraH3("- Código: 1");
+            mostra("Nome: Fulano");
+            PulaLinha2();
+            mostra("Mês de nascimento: Fevereiro");
+            PulaLinha2();
+            mostra("Ano de nascimento: " + anoFulano);
+            traço();
+            mostraH3("- Código: 2");
+            mostra("Nome: Beltrano");
+            PulaLinha2();
+            mostra("Mês de nascimento: Maio");
+            PulaLinha2();
+            mostra("Ano de nascimento: " + anoBeltrano);
+            traço();
+            mostraH3("- Código: 3");
+            mostra("Nome: Sicrano");
+            PulaLinha2();
+            mostra("Mês de nascimento: Novembro");
+            PulaLinha2();
+            mostra("Ano de nascimento: " + anoSicrano);
+            traço();
+            mostra("*** Estatística ***");
+            PulaLinha2();
+            mostra("Soma das idades: " + somaIdades);
+            PulaLinha2();
+            mostra("Média das idades: " + Math.round(mediaIdades));
+        }
+
+        function Rodape(){
+            traço();
+            mostra(".:: Alura LEVEL UP ::.");
+        }
+
+        Cabecalho();
+        Conteudo();
+        Rodape();
+
+    </script>
+</body>
+</html>
